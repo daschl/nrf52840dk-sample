@@ -1,0 +1,28 @@
+[package]
+name = "nrf52840dk-sample"
+version = "0.1.0"
+authors = ["Michael Nitschinger <michael@nitschinger.at>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+cortex-m = "0.6.3"
+cortex-m-rt = "0.6.12"
+defmt = { git = "https://github.com/knurling-rs/defmt", branch = "main" }
+defmt-rtt = { git = "https://github.com/knurling-rs/defmt", branch = "main" }
+nrf52840-hal = "0.11.0"
+
+[features]
+# set logging levels here
+default = [
+  "defmt-default",
+]
+
+# do NOT modify these features
+defmt-default = []
+defmt-trace = []
+defmt-debug = []
+defmt-info = []
+defmt-warn = []
+defmt-error = []
